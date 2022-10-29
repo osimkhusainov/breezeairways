@@ -1,6 +1,6 @@
 describe("Roundtrip without login", () => {
   const apiURL = Cypress.env("apiURL");
-  it("Search, choose flight and seat, up to add bags", () => {
+  it("e2e from searching to adding bags", () => {
     cy.intercept(apiURL + "nsk/v4/availability/search/simple").as(
       "search-result"
     );

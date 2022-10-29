@@ -4,7 +4,7 @@ Cypress.Commands.add("getAllFlights", () => {
 
 Cypress.Commands.add("getDate", (locator) => {
   return cy
-    .get(`.date`)
+    .get(`.date`, { timeout: 15000 })
     .contains(locator)
     .parent()
     .find("span")

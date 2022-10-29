@@ -1,8 +1,8 @@
 Cypress.Commands.add("fillSearchInputRandomly", (input) => {
   cy.findByText(input).next().find("input").should("be.empty").click();
+  cy.get(".ng-spinner-loader", { timeout: 30000 }).should("not.exist");
   // click random city from suggestion
   cy.findAllByRole("option", { timeout: 20000 })
-    .should("have.length.greaterThan", 0)
     .its("length")
     .then((elements) => Cypress._.random(elements - 1))
     .then((randomEl) => {
