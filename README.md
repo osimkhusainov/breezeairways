@@ -2,7 +2,7 @@
 ## In order to download and launch tests Node installed is required 
 ### 1. Download / clone current repository
 ### 2. Use `npm install` within VSCode terminal
-### 3. Use either `npx cypress open` in order to open Cypress browser or `npm run test` in order to run scripts within the terminal
+### 3. Use either `npx cypress open` in order to open Cypress browser or `npm run test` to run scripts within the terminal
 ### 4. After running the tests using `npm run test`, use `npm run report:open` to open the beautiful Allure report
 
 Cypress tests are in `cypress/e2e/`
