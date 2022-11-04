@@ -40,7 +40,7 @@ Cypress.Commands.add(
   }
 );
 
-Cypress.Commands.add("selectSeat", (indexOfSeat) => {
+Cypress.Commands.add("selectSeat", (indexOfSeat = 0) => {
   cy.findAllByRole("checkbox")
     .not('[aria-disabled="true"]')
     .eq(indexOfSeat)
