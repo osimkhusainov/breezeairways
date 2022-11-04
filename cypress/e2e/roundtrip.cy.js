@@ -16,7 +16,8 @@ describe("Roundtrip without login", () => {
     cy.get(".travel-dates", { timeout: 60000 })
       .should("contain.text", "Depart")
       .click();
-    cy.findByAvailableDate(0);
+    // pick first availabe date
+    cy.findByAvailableDate();
     cy.findByAvailableDate(1);
     cy.findByText("Depart").parent().should("not.contain.text", "Select");
     cy.get("#search-flights").then((btn) => {
